@@ -1,0 +1,17 @@
+# Нарисуйте 10 вложенных квадратов.
+
+import turtle
+
+turtle.shape('turtle')
+for steep in range(10):
+    turtle.penup()
+    turtle.goto(- steep * 10, - steep * 10)
+    turtle.pendown()
+    turtle.forward(50 + 20 * steep)
+    turtle.left(90)
+    turtle.forward(50 + 20 * steep)
+    turtle.left(90)
+    turtle.forward(50 + 20 * steep)
+    turtle.left(90)
+    turtle.forward(50 + 20 * steep)
+    turtle.left(90)
