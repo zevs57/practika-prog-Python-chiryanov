@@ -1,0 +1,12 @@
+# Нарисуйте спираль. См. теорию. (Архимедова спираль).
+
+import math
+import turtle
+
+turtle.shape('turtle')
+x = 0
+for steep in range(300):
+    turtle.left(2 * math.pi)
+    x = (x + 2 * math.pi * 0.0025)
+    turtle.forward(x)
+    
