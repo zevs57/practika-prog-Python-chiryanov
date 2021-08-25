@@ -1,0 +1,7 @@
+# Нарисуйте «квадратную» спираль. Пример:
+import turtle
+
+turtle.shape('turtle')
+for steep in range(30):
+    turtle.forward(4 * steep)
+    turtle.left(90)
