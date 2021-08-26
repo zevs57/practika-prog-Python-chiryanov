@@ -1,0 +1,17 @@
+# Нарисуйте «бабочку» из окружностей. Используйте функцию, рисующую окружность.
+
+import turtle
+
+
+def circle(n):
+    radius = 10
+    turtle.left(90)
+    for i in range(n):
+        turtle.circle(radius)
+        turtle.circle(-radius)
+        radius += 10
+
+
+turtle.shape('turtle')
+circle(6)
+turtle.exitonclick()
