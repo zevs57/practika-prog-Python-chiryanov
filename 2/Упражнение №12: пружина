@@ -1,0 +1,16 @@
+# Нарисуйте пружину. Используйте функцию, рисующую дугу. 
+
+import turtle
+
+
+def circle(n):
+    radius = 30
+    turtle.right(90)
+    for i in range(n):
+        turtle.circle(radius, 180)
+        turtle.circle(radius - 25, 180)
+
+
+turtle.shape('turtle')
+circle(6)
+turtle.exitonclick()
