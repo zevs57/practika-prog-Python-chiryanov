@@ -1,0 +1,30 @@
+# Нарисуйте 10 вложенных правильных многоугольников. Используйте функцию, рисующую правильный n-угольник.
+# Формулы для нахождения радиуса описанной окружности.
+
+import math
+import turtle
+
+turtle.shape('turtle')
+
+
+def storona(n, R):
+    """
+    :param n:  число сторон правильного многоугольника
+    :param R: радиус описанной окружности правильного многоугольника
+    :return: сторона правильного многоугольника
+    """
+    a = R * (2 * math.sin(2 * math.pi / (2 * n)))
+    return a
+
+def poligon(n):
+    R = 40
+    for n in range(3, n):
+        turtle.penup()
+        turtle.goto(0, -R)
+        turtle.pendown()
+        for i in range(n):
+            turtle.forward(storona(n, R))
+            turtle.left(360 / n)
+        R += 10
+
+poligon(13)
