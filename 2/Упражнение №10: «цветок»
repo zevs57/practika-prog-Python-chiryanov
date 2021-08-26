@@ -1,0 +1,14 @@
+# Нарисуйте «цветок» из окружностей. Используйте функцию, рисующую окружность.
+
+import turtle
+
+
+def circle(n):
+    for i in range(n):
+        turtle.circle(30)
+        turtle.left(360 / n)
+
+
+turtle.shape('turtle')
+circle(6)
+turtle.exitonclick()
