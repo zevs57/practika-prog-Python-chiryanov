@@ -1,0 +1,47 @@
+# Нарисуйте смайлик с помощью написанных функций рисования круга и дуги.
+
+import turtle
+
+turtle.shape('turtle')
+
+# Рисуем окружность и закрашиваем желтым
+turtle.fillcolor('yellow')
+turtle.begin_fill()
+turtle.circle(145)
+turtle.end_fill()
+
+# Рисуем левый глаз и закрашиваем синим
+turtle.penup()
+turtle.goto(-50, 210)
+turtle.pendown()
+turtle.fillcolor('blue')
+turtle.begin_fill()
+turtle.circle(20)
+turtle.end_fill()
+
+# Рисуем правый глаз и закрашиваем синим
+turtle.penup()
+turtle.goto(50, 210)
+turtle.pendown()
+turtle.fillcolor('blue')
+turtle.begin_fill()
+turtle.circle(20)
+turtle.end_fill()
+
+# Рисуем нос
+turtle.penup()
+turtle.goto(0, 170)
+turtle.pendown()
+turtle.pensize(17)
+turtle.right(90)
+turtle.forward(50)
+
+# Рисуем улыбку
+turtle.penup()
+turtle.goto(60, 120)
+turtle.pendown()
+turtle.pensize(20)
+turtle.color("red")
+turtle.circle(-60, 180)
+
+turtle.exitonclick()
