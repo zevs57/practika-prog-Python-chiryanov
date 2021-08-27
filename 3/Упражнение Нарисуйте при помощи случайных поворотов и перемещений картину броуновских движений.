@@ -1,0 +1,19 @@
+# Нарисуйте при помощи случайных поворотов и перемещений картину броуновских движений.
+
+import turtle
+from random import *
+
+turtle.shape('turtle')
+
+
+def broun(n):
+    for i in range(n):
+        turtle.color("red")
+        turtle.pensize(10)
+        turtle.speed(15)
+        turtle.forward(100 * random())
+        turtle.left(180 * random())
+
+
+broun(50)
+turtle.exitonclick()
