@@ -1,0 +1,39 @@
+# Первое задание-картинка одинаковое у всех студентов. Нарисовать злой смайлик:
+
+import pygame
+from pygame.draw import *
+
+pygame.init()
+
+FPS = 30
+screen = pygame.display.set_mode((400, 400))
+screen.fill([128, 128, 128])
+
+# Желтый круг
+circle(screen, (255, 255, 0), (200, 175), 100)
+# Левый глаз
+circle(screen, (255, 0, 0), (150, 150), 25)
+circle(screen, (0, 0, 0), (150, 150), 10)
+# Левая бровь
+line(screen, (0, 0, 0), (100, 100), (175, 127), width=12)
+
+# Правый глаз
+circle(screen, (255, 0, 0), (250, 150), 20)
+circle(screen, (0, 0, 0), (250, 150), 10)
+# Правая бровь
+line(screen, (0, 0, 0), (300, 110), (220, 130), width=12)
+
+#Рот
+polygon(screen, ( 0, 0, 0), [(150, 205), (150, 230), (250, 230),(250, 205)])
+
+pygame.display.update()
+clock = pygame.time.Clock()
+finished = False
+
+while not finished:
+    clock.tick(FPS)
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            finished = True
+
+pygame.quit()
